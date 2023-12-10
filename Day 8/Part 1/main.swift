@@ -46,5 +46,5 @@ do { let input =  try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs
     solution = countSteps(instructions, network, startLocation)
     print(solution)
 
-}
+} catch { print ("file not found") }
 
