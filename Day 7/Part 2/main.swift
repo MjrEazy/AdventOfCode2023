@@ -64,7 +64,6 @@ struct Hand: Hashable {
                 let card = self.cards[cards.index(self.cards.startIndex, offsetBy: i)]
                 if card == "J" { self.values[i] = 1 }
             }
-            print (self)
         }
     }
 }
@@ -176,7 +175,5 @@ do { let input =  try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs
     }
 
     print (winnings)
-    print ("248360732 too low!")
-    print ("248474680 too low!")
     
 } catch { print ("file not found") }
