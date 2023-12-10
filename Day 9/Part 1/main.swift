@@ -1,8 +1,7 @@
 import Foundation
 
 func loadFileAsInts(file: String) -> [[Int]] {
-//    do { let input =  try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs/Day9_Test.txt", encoding: String.Encoding.utf8)
-    do { let input =  try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs/Day9_input.txt", encoding: String.Encoding.utf8)
+    do { let input =  try String(contentsOfFile: file, encoding: String.Encoding.utf8)
         return input.components(separatedBy: "\n").compactMap { row in
             row.components(separatedBy: " ").compactMap { Int($0) }
         }
@@ -20,9 +19,9 @@ func getNextNumber(sequence: [Int]) -> Int {
     return sequence.last! + nextNumber
 }
 
-let input = loadFileAsInts(file: "/Users/David/Projects/AoC23/inputs/Day9_Test.txt")
-//let input = loadFileAsInts(file: "/Users/David/Projects/AoC23/inputs/Day9_input.txt")
-print (input)
+//let input = loadFileAsInts(file: "/Users/David/Projects/AoC23/inputs/Day9_Test.txt")
+let input = loadFileAsInts(file: "/Users/David/Projects/AoC23/inputs/Day9_input.txt")
+//print (input)
 let result = input.reduce(0) { $0 + getNextNumber(sequence: $1) }
-print(result)
+print (result)
 
