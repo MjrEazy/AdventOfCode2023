@@ -1,5 +1,7 @@
 import Foundation
 
+// got regex working but only by doing it in Python 1st then copying the regex to my swift code and I'd guess there's a better way of handling the ones with a - where there is no numeric part?
+
 //do { let input = try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs/Day15_Test.txt", encoding: String.Encoding.utf8)
 do { let input = try String(contentsOfFile: "/Users/David/Projects/AoC23/inputs/Day15_input.txt", encoding: String.Encoding.utf8)
 
